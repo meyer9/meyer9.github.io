@@ -1,5 +1,6 @@
 ---
 title: "Validating 15 ideas in 30 days"
+comments: true
 categories:
   - Blog
   - Idea Validation

@@ -1,5 +1,6 @@
 ---
 title: "Idea Validation Day 2: First Landing Page Up and Running"
+comments: true
 categories:
   - Blog
   - Idea Validation
