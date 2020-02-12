@@ -46,6 +46,10 @@ defaults:
       type: posts
     values:
       comments: true
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-7290154-14"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
