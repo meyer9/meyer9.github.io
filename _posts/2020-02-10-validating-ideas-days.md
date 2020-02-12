@@ -2,8 +2,8 @@
 title: "Validating 15 ideas in 30 days"
 comments: true
 categories:
-  - Blog
-  - Idea Validation
+  - blog
+  - idea-validation
 ---
 
 Last week, I attended a talk at my university by [Marc Randolph](https://www.marcrandolph.com/), co-founder and the first CEO of Netflix. He gave a ton of great advice about how to start a successful company. One idea that really jumped out at me was: come up with a system for validating ideas quickly. Of course, the entire presentation I was thinking about how to apply these things to [pagecheck](https://pagecheck.app). I realized a few problems with how I started pagecheck.

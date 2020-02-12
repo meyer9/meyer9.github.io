@@ -2,8 +2,8 @@
 title: "Idea Validation Day 2: First Landing Page Up and Running"
 comments: true
 categories:
-  - Blog
-  - Idea Validation
+  - blog
+  - idea-validation
 ---
 
 A few weeks ago, I attended a talk at my university by [Marc Randolph](https://www.marcrandolph.com/), co-founder and the first CEO of Netflix. He gave a ton of great advice about how to start a successful company. One idea that really jumped out at me was: come up with a system for validating ideas quickly. This blog series documents my attempt to validate ideas very quickly and come up with a system for validating ideas quickly.
