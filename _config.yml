@@ -36,7 +36,7 @@ timezone: America/Los_Angeles
 comments:
   provider: "utterances"
   utterances:
-    theme: "github-dark"
+    theme: "boxy-light"
 include:
   - _pages
 defaults:
