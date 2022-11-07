@@ -1,0 +1,21 @@
+.post {
+  p {
+    @apply pb-3;
+  }
+
+  code:global(.hljs) {
+    font-size: 0.75em;
+    @apply mt-2 mb-4;
+  }
+}
+
+.image {
+  @apply rounded-lg;
+  @apply box-border;
+  @apply my-8;
+  @apply block;
+
+  max-height: 500px;
+  max-width: 100%;
+  @apply mx-auto;
+}

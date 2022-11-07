@@ -1,0 +1,41 @@
+.container {
+  padding: 0 1rem;
+
+  @screen md {
+    padding: 0 2rem;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  @apply max-w-screen-md;
+  @apply mx-auto;
+  padding: 4rem 0;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid theme("colors.amber.600");
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply px-4;
+}
+
+.experience {
+  @apply p-4;
+  @apply border border-amber-600 bg-white;
+  @apply rounded-lg;
+  @apply mb-4;
+}

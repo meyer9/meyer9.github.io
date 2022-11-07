@@ -1,10 +1,13 @@
 ---
 title: "How to authorize user accounts to GitHub app installations"
+publishedDate: "2021-12-22"
 comments: true
 categories:
   - blog
   - engineering
 ---
+
+import PostLayout from "components/PostLayout";
 
 Access management is extremely important in building any developer tools. In this post, I've documented the best way I've found to authenticate users to GitHub App installations.
 
@@ -21,7 +24,8 @@ GitHub's docs don't mention the third step of authorizing the installation with 
 > You can provide a state parameter in an app's installation URL to preserve the state of the application page and return people back to that state after they install, authenticate, or accept updates to your GitHub App. For example, you could use the state to correlate an installation to a user or account.
 
 <small>
-Source: <a href="//docs.github.com/en/developers/apps/managing-github-apps/installing-github-apps#authorizing-users-during-installation" target='_blank'>GitHub Docs</a>
+  Source: [Github
+  Docs](//docs.github.com/en/developers/apps/managing-github-apps/installing-github-apps#authorizing-users-during-installation)
 </small>
 
 However, the `state` parameter only verifies that a specific _installation flow_ is correlated with a user account, but not that the actual install destination is accessible by the user account.
@@ -32,7 +36,7 @@ There's a relatively simple attack if using this method. An attacker could start
 
 Another issue is that if the app is already installed, the GitHub app install UI will not allow you to reinstall it and will instead show a "Configure" option.
 
-<img src="/assets/images/configure-ss.png" alt="GitHub apps show configure if already installed" width=400 style="margin: auto; display: block;" />
+[![GitHub apps show configure if already installed](/configure-ss.png)](/configure-ss.png)
 
 If the user clicks the configure option, it takes them to the app install configuration screen instead of back to your app.
 
@@ -112,3 +116,11 @@ Before you start, make sure you have created a GitHub app and are able to load t
 Overall, it's not overly difficult to associate a GitHub App installation with a user using the `GET /user/installations` endpoint, but the GitHub docs are not helpful in understanding this step in the installation process.
 
 I hope this post helps someone avoid the rabbit hole of GitHub App authorization and build apps on GitHub faster.
+
+export default ({ children }) => {
+  return (
+    <PostLayout title={title} publishedDate={publishedDate}>
+      {children}
+    </PostLayout>
+  );
+};
