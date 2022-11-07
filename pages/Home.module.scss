@@ -24,6 +24,7 @@
   border-top: 1px solid theme("colors.amber.600");
   justify-content: center;
   align-items: center;
+  @apply max-w-screen-md mx-auto;
 }
 
 .footer a {

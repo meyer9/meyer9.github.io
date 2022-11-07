@@ -3,7 +3,6 @@ import Image from "next/image";
 import styles from "./Home.module.scss";
 
 import Profile from "public/profile.jpeg";
-import POSTS from "./posts";
 import Link from "next/link";
 import { getPosts, Post } from "../scripts/utils";
 import { GetStaticPropsResult } from "next";
@@ -69,14 +68,14 @@ export default function Home({ posts }: ProvidedProps): JSX.Element {
               Hi there! Welcome to my blog! 👋
             </h2>
             <p>
-              I'm a full-stack engineer building software to help local
+              I&apos;m a full-stack engineer building software to help local
               restaurants manage their online presence.
             </p>
             <p>
-              I enjoy exploring different areas of software engineering. I've
-              jumped from low-level cryptography to blockchain code to building
-              scalable developer infrastructure. Below you'll find a list of
-              projects I've worked on recently.
+              I enjoy exploring different areas of software engineering.
+              I&apos;ve jumped from low-level cryptography to blockchain code to
+              building scalable developer infrastructure. Below you&apos;ll find
+              a list of projects I&apos;ve worked on recently.
             </p>
           </div>
         </div>
@@ -87,7 +86,7 @@ export default function Home({ posts }: ProvidedProps): JSX.Element {
             </h3>
             <ul className="list-disc ml-4">
               {PROJECTS.map((project) => (
-                <li className="pl-1 pb-2">
+                <li className="pl-1 pb-2" key={project.name}>
                   <a href={project.href}>{project.name}</a> ({project.date})
                 </li>
               ))}
@@ -99,7 +98,7 @@ export default function Home({ posts }: ProvidedProps): JSX.Element {
               <ul className="list-disc ml-4">
                 {posts.map((post) => {
                   return (
-                    <li className="pl-1 pb-2">
+                    <li className="pl-1 pb-2" key={post.slug}>
                       <Link href={`/posts/${post.slug}`} key={post.slug}>
                         {post.data.title} ({post.data.publishedDate})
                       </Link>
@@ -113,10 +112,10 @@ export default function Home({ posts }: ProvidedProps): JSX.Element {
         <div className="pt-6">
           <h3 className="text-lg font-semibold pb-2">Experience</h3>
           <p>
-            In the past, I've really enjoyed working on a variety of different
-            parts of the stack. Although for some it can make sense to
-            specialize, I'm more of a tinkerer and enjoy playing around with new
-            technologies.
+            In the past, I&apos;ve really enjoyed working on a variety of
+            different parts of the stack. Although for some it can make sense to
+            specialize, I&apos;m more of a tinkerer and enjoy playing around
+            with new technologies.
           </p>
           <ul>
             <li>
@@ -200,7 +199,7 @@ export default function Home({ posts }: ProvidedProps): JSX.Element {
                 tool and helped speed up the project to ship on time.
               </li>
               <li>
-                Developed and shipped a new version of the app's home page,
+                Developed and shipped a new version of the app&apos;s home page,
                 optimizing for time-to-first frame streaming performance.
               </li>
               <li>Lead a project to ship a new version of the archive page.</li>
