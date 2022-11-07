@@ -11,6 +11,7 @@ interface ProvidedProps {
 }
 
 const ResponsiveImage = (props) => (
+  // eslint-disable-next-line @next/next/no-img-element
   <img alt={props.alt} className={styles.image} {...props} />
 );
 
