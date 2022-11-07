@@ -1,4 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -31,6 +32,10 @@ const PostLayout = ({ children, title, publishedDate }: ProvidedProps) => {
 
   return (
     <div className="w-full max-w-screen-md mx-auto py-8 lg:px-16 px-4 overflow-hidden">
+      <Head>
+        <title>{title} - Julian Meyer&apos;s Blog</title>
+        <meta name="description" content={title} />
+      </Head>
       <header>
         <Link href="/">Back to Home</Link>
       </header>
