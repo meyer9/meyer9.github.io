@@ -31,7 +31,7 @@ const PostLayout = ({ children, title, publishedDate }: ProvidedProps) => {
   };
 
   return (
-    <div className="w-full max-w-screen-md mx-auto py-8 lg:px-16 px-4 overflow-hidden">
+    <div className="w-full max-w-screen-md mx-auto py-8 px-4 overflow-hidden">
       <Head>
         <title>{title} - Julian Meyer&apos;s Blog</title>
         <meta name="description" content={title} />

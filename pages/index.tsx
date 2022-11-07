@@ -63,7 +63,7 @@ export default function Home({ posts }: ProvidedProps): JSX.Element {
             />
           </div>
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold">Julian Meyer</h1>
+            <h1 className="text-4xl leading-tight font-bold">Julian Meyer</h1>
             <h2 className="text-xl font-semibold">
               Hi there! Welcome to my blog! 👋
             </h2>

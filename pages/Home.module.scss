@@ -36,7 +36,15 @@
 
 .experience {
   @apply p-4;
-  @apply border border-amber-600 bg-white;
+  @apply border border-amber-600;
+  background: rgb(255, 253, 245);
   @apply rounded-lg;
   @apply mb-4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .experience {
+    @apply border-neutral-800;
+    @apply bg-neutral-800;
+  }
 }
