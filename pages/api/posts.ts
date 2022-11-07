@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getPosts } from "../../scripts/utils.ts";
+import { getPosts } from "../../scripts/utils";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const posts = getPosts(2); // argument will change
