@@ -77,6 +77,7 @@ export default function Home({ posts }: ProvidedProps): JSX.Element {
               building scalable developer infrastructure. Below you&apos;ll find
               a list of projects I&apos;ve worked on recently.
             </p>
+            <p>You can contact me at julianmeyer2000[at]gmail.com.</p>
           </div>
         </div>
         <div className="grid md:grid-cols-2 w-full">
