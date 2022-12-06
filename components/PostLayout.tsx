@@ -19,12 +19,15 @@ const ResponsiveImage = (props) => (
 const PostLayout = ({ children, title, publishedDate }: ProvidedProps) => {
   const handleScriptRef = (node) => {
     if (node) {
-      node.src = "https://utteranc.es/client.js";
-      node.async = true;
-      node.crossOrigin = "anonymous";
-      node.setAttribute("repo", "meyer9/meyer9.github.io");
-      node.setAttribute("issue-term", "pathname");
-      node.setAttribute("theme", "github-light");
+      const script = document.createElement("script");
+      script.src = "https://utteranc.es/client.js";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      script.setAttribute("repo", "meyer9/meyer9.github.io");
+      script.setAttribute("issue-term", "pathname");
+      script.setAttribute("theme", "github-light");
+
+      node.appendChild(script);
     }
   };
 
@@ -46,9 +49,7 @@ const PostLayout = ({ children, title, publishedDate }: ProvidedProps) => {
           <h1>{title}</h1>
           <p className="text-gray-600 italic">Posted on {publishedDate}</p>
           {children}
-          <section className="pt-4">
-            <script ref={handleScriptRef}></script>
-          </section>
+          <section className="pt-4" ref={handleScriptRef}></section>
         </main>
       </MDXProvider>
     </div>
