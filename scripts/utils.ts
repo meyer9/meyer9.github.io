@@ -31,5 +31,11 @@ export const getPosts = (pageIndex: number) => {
     })
     .filter((post) => post);
 
+  posts.sort(
+    (a, b) =>
+      new Date(b.data.publishedDate).getTime() -
+      new Date(a.data.publishedDate).getTime()
+  );
+
   return posts;
 };

@@ -17,8 +17,6 @@ const ResponsiveImage = (props) => (
 );
 
 const PostLayout = ({ children, title, publishedDate }: ProvidedProps) => {
-  const date = new Date(publishedDate);
-
   const handleScriptRef = (node) => {
     if (node) {
       node.src = "https://utteranc.es/client.js";
@@ -46,9 +44,7 @@ const PostLayout = ({ children, title, publishedDate }: ProvidedProps) => {
       >
         <main className={styles.post}>
           <h1>{title}</h1>
-          <p className="text-gray-600 italic">
-            Posted on {date.toLocaleDateString()}
-          </p>
+          <p className="text-gray-600 italic">Posted on {publishedDate}</p>
           {children}
           <section className="pt-4">
             <script ref={handleScriptRef}></script>
